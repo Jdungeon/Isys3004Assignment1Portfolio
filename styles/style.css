@@ -1,0 +1,557 @@
+/* Name: style.css
+   Author: Jaden Ah Yuen
+   Description: Styling for portfolio
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+:root{
+   --grey:#889b9e;
+   --black:#000;
+   --white:#fff;
+   --light-bg:#eee;
+   --border-bold:4px solid var(--black);
+   --border-light:2px solid var(--black);
+}
+ 
+
+*{
+   font-family: 'Rubik', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   text-transform: capitalize;
+   color:var(--black);
+}
+
+*::selection{
+   background-color: var(--black);
+   color:var(--grey);
+}
+
+*::-webkit-scrollbar{
+   height: .5px;
+   width: 10px;
+}
+
+*::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+   background-color: var(--grey);
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+}
+
+body{
+   overflow: hidden;
+   transition: .2s linear !important;
+}
+
+body.active{
+   padding-left: 350px;
+}
+
+section{
+   padding:100px 20px;
+   margin: 0 auto;
+   max-width: 1200px;
+   text-align: center;
+}
+
+.heading{
+   margin-bottom: 30px;
+   text-align: center;
+}
+
+.heading span{
+   text-transform: uppercase;
+   font-size: 65px;
+   border-bottom: var(--border-bold);
+}
+
+.message{
+   position: sticky;
+   top:20px;
+   max-width: 1200px;
+   margin:0 auto;
+   background-color: var(--grey);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding:20px;
+   font-size: 20px;
+}
+
+.message i{
+   cursor: pointer;
+}
+
+.btn{
+   display: inline-block;
+   margin-top: 10px;
+   cursor: pointer;
+   padding:10px 30px;
+   border:var(--border-light);
+   font-size: 20px;
+   background: none;
+}
+
+.btn:hover{
+   background-color: var(--grey);
+   color:var(--white);
+   border: var(--grey);
+}
+
+.header{
+   position: fixed;
+   top:0; left:-350px;
+   height: 100vh;
+   background-color: var(--white);
+   border-right: var(--border-bold);
+   width: 350px;
+   padding:30px 20px;
+   text-align: center; 
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-flow: column;
+   transition: .2s linear !important;
+   text-align: center;
+   z-index: 1000;
+}
+
+.header .logo{
+   text-transform: uppercase;
+   border-bottom: var(--border-bold);
+   font-weight: bolder;
+   font-size: 45px;
+}
+
+.header .navbar{
+   width: 100%;
+   height: 80%;
+}
+
+.header .navbar a{
+   display: block;
+   font-size: 25px;
+   padding:15px;
+   margin:5px;
+}
+
+.header .navbar a.active,
+.header .navbar a:hover{
+   background-color: var(--grey);
+   color: var(--white);
+}
+
+
+#menu-btn{
+   position: absolute;
+   top:0; right:-55px;
+   height: 45px;
+   line-height: 45px;
+   width: 50px;
+   font-size: 25px;
+   cursor: pointer;
+   background-color: var(--black);
+   color:var(--white);
+}
+
+.header.active{
+   left: 0;
+}
+
+.home{
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap:20px;
+   min-height: 100vh;
+}
+
+.hero1{
+   background-image: url(../images/subtle-prism.svg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   overflow: hidden;
+}
+
+.home .image{
+   flex:1 1 400px;
+}
+
+.home .content span{
+   color: var(--white);
+}
+
+.home .image img{
+   height: 650px;
+   padding:20px;
+   border:var(--border-bold);
+}
+
+.home .content{
+   flex:1 1 400px;
+}
+
+.home .content h3{
+   text-transform: uppercase;
+   font-size: 50px;
+   margin-bottom: 0.5px;
+}
+
+.home .content .icon:hover{
+   transform: scale(1.2);
+   transition: 0.1s linear;
+   color: var(--grey);
+}
+
+.home .content span{
+   display: inline-block;
+   padding:10px 20px;
+   background-color: var(--grey);
+   font-size: 25px;
+   margin:10px 0;
+}
+
+.home .content p{
+   font-size: 17px;
+   line-height: 2;
+   padding:10px 0;
+}
+
+.home .content a{
+   padding-top: 15px;
+   font-size: 30px;
+   margin:0 10px;
+   cursor: pointer;
+}
+
+
+.about .biography p{
+   margin:20px auto;
+   max-width: 700px;
+   line-height: 2;
+   font-size: 18px;
+}
+
+.about .biography .bio{
+   margin: 10px 0;
+}
+
+.about .biography .bio h3{
+   padding:10px 20px;
+   display: inline-block;
+   margin:10px;
+   background-color: var(--light-bg);
+   border:var(--border-light);
+   word-break: break-all;
+   font-size: 25px;
+   font-weight: normal;
+   text-transform: none;
+}
+
+.about .biography .bio h3 span{
+   font-weight: lighter;
+}
+
+.about .skills{
+   margin:75px 0;
+}
+
+.about .skills .progress{
+   margin-top: 10px;
+}
+
+.about .skills .progress .bar{
+   margin:10px auto;
+   max-width: 700px;
+   border:var(--border-bold);
+   padding:10px;
+}
+
+.about .skills .progress .bar h3{
+   display: flex;
+   align-items: center;
+   font-size: 20px;
+   padding:10px 20px;
+   background-color: var(--grey);
+}
+
+.about .skills .progress .bar .ico{
+   color: var(--white);
+}   
+
+.about .skills .progress .bar span{
+   font-weight: normal;
+   margin: 10px;
+   color: var(--white);
+}
+
+.about .skills .progress .bar span:last-of-type{
+   margin-left: auto;
+}
+
+.about .skills .progress .bar:nth-child(1) h3{
+   width: 75%;
+}
+
+.about .skills .progress .bar:nth-child(2) h3{
+   width: 85%;
+}
+
+.about .skills .progress .bar:nth-child(3) h3{
+   width: 80%;
+}
+
+.about .skills .progress .bar:nth-child(4) h3{
+   width: 65%;
+}
+
+.about .skills .progress .bar:nth-child(5) h3{
+   width: 90%;
+}
+
+.about .skills .progress .bar:nth-child(6) h3{
+   width: 90%;
+}
+
+.about .skills .progress .bar:nth-child(7) h3{
+   width: 85%;
+}
+
+.about .edu-exp .row{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 15px;
+}
+
+.about .edu-exp .row .box-container{
+   flex:1 1 400px;
+}
+
+.about .edu-exp .row .box-container .title{
+   padding:15px;
+   font-size: 30px;
+   background-color: var(--grey);
+   color: var(--white);
+}
+
+.about .edu-exp .row .box-container .box{
+   text-align: left;
+   margin:15px 0;
+   background-color: var(--light-bg);
+   padding:20px;
+   height: 27%;
+}
+
+.about .edu-exp .row .box-container .box span{
+   font-size: 15px;
+}
+
+.about .edu-exp .row .box-container .box h3{
+   font-size: 25px;
+   font-weight: normal;
+   margin-top: 15px;
+   margin-bottom: 10px;
+}
+
+.about .edu-exp .row .box-container .box p{
+   line-height: 1.5;
+   font-size: 17px;
+   line-height: 2;
+}
+
+
+.project .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap:15px;
+   align-items: flex-start;
+}
+
+.project .box-container .box img{
+   height: 300px;
+   width: 100%;
+   object-fit: cover;
+   border: 2px solid var(--black);
+}
+
+.project .box-container .box img:hover{
+   scale: 103%;
+   transition: 0.1s linear;
+   border: 2px solid var(--grey);
+}
+
+.project .box-container .box h3{
+   margin:10px 0;
+   font-size: 25px;
+   font-weight: normal;
+}
+
+.project .box-container .box span{
+   font-size: 17px;
+}
+
+.contact .form{
+   max-width: 700px;
+   margin:0 auto;
+}
+
+.contact .form .box{
+   width: 100%;
+   padding:14px;
+   font-size: 20px;
+   text-transform: none;
+   border:var(--border-light);
+   margin:10px 0;
+}
+
+.contact .form textarea{
+   height: 200px;
+   resize: none;
+}
+
+.contact .form .flex{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.contact .form .flex .box{
+   width: 50%;
+}
+
+.contact .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap:15px;
+   align-items: flex-start;
+   margin-top: 30px;
+}
+
+.contact .box-container .box{
+   padding:30px 20px;
+   border:var(--border-light);
+}
+
+.contact .box-container .box i{
+   font-size: 30px;
+   height: 70px;
+   width: 70px;
+   line-height: 70px;
+   color:var(--white);
+   background-color: var(--black);
+   margin-bottom: 5px;
+}
+
+.contact .box-container .box h3{
+   margin:15px 0;
+   font-size: 25px;
+}
+
+.contact .box-container .box p{
+   font-size: 20px;
+   text-transform: none;
+}
+
+.reflection p{
+   margin:20px auto;
+   max-width: 700px;
+   line-height: 2;
+   font-size: 18px;
+}
+
+.reflection img{
+   height: 500px;
+   padding:20px;
+   border:var(--border-light);
+}
+.credit{
+   text-align: right;
+   background-color: var(--black);
+   padding:30px;
+   font-size: 10px;
+   color:var(--white);
+}
+
+.credit a{
+   color:var(--white);
+}
+
+.credit p{
+   text-align: left;
+   color: var(--white);
+   font-size: 10px;
+}
+
+
+
+
+
+
+@media (max-width:990px){
+
+   html{
+      font-size: 55%;
+   }
+
+   body.active{
+      padding-left: 0;
+   }
+
+   .reflection img{
+      height: auto;
+      width: 100%;
+   }
+
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%;
+   }
+
+   .header.active{
+      padding-top: 70px;
+   }
+
+   #menu-btn.fa-times{
+      right:0;
+   }
+
+   .home .image img{
+      height: auto;
+      width: 100%;
+   }
+
+   .heading span{
+      font-size: 40px;
+   }
+
+   .about .biography .bio h3{
+      font-size: 20px;
+   }
+
+   .contact .form .flex .box{
+      width: 100%;
+   }
+
+   .reflection .img{
+      width: 300px;
+   }
+
+   .reflection img{
+      height: auto;
+      width: 100%;
+   }
+}
